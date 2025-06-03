@@ -5,14 +5,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Ostap Blystsiv's personal website. Product Manager based in Lviv, Ukraine." />
-
-		<!-- Open Graph Meta Tags -->
 		<meta property="og:title" content="Ostap Blystsiv's Personal Website" />
 		<meta property="og:description" content="Product Manager based in Lviv, Ukraine" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://blystsiv.me" />
-		<meta property="og:image" content="avatar.png" />
-		<link rel="icon" href="avatar.png" type="image/x-icon" />
+		<link rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='56' font-size='60'%3E🎧%3C/text%3E%3C/svg%3E"
+			type="image/svg+xml" />
 
 		<title>Ostap Blystsiv | Product Manager</title>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
@@ -48,7 +47,7 @@
 
 			/* Container Styles */
 			.container {
-				max-width: 600px;
+				max-width: 800px;
 				width: 100%;
 				margin: 0 auto;
 				padding: 20px;
@@ -65,7 +64,7 @@
 			}
 
 			.intro-text {
-				font-size: 1.3em;
+				font-size: 1.5em;
 				font-weight: 700;
 				margin-bottom: 10px;
 				color: var(--accent);
@@ -96,7 +95,7 @@
 			}
 
 			.content p {
-				font-size: 1em;
+				font-size: 1.1em;
 				margin-bottom: 10px;
 				line-height: 1.6;
 			}
@@ -163,6 +162,11 @@
 				.links li {
 					margin-right: 10px;
 				}
+
+				body {
+					align-items: flex-start;
+					padding: 5px;
+				}
 			}
 
 			/* Larger text for huge screens */
@@ -172,9 +176,14 @@
 				}
 
 				.subheader,
-				.content p,
 				.links a {
 					font-size: 0.85em;
+				}
+			}
+
+			@media (min-width: 1200px) {
+				.content p {
+					font-size: 1.2em;
 				}
 			}
 
@@ -183,12 +192,17 @@
 				color: #000000;
 			}
 
+			@media (min-width: 1600px) {
+				.container {
+					max-width: 800px;
+				}
+			}
+
 		</style>
 	</head>
 
 	<body>
 		<div class="container">
-			<!-- Content Section -->
 			<div class="content">
 				<header>
 					<p class="intro-text">
