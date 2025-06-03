@@ -19,6 +19,13 @@
 
 		<style>
 			/* Global Reset */
+			:root {
+				--accent: #f39c12;
+				/* warm orange */
+				--accent-hover: #d35400;
+				/* darker orange for hover */
+			}
+
 			* {
 				margin: 0;
 				padding: 0;
@@ -34,32 +41,17 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				padding: 20px;
+				padding: 10px;
+				font-size: 16px;
+				line-height: 1.6;
 			}
 
 			/* Container Styles */
 			.container {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				justify-content: center;
-				max-width: 800px;
+				max-width: 600px;
 				width: 100%;
+				margin: 0 auto;
 				padding: 20px;
-			}
-
-			/* Profile Photo Styling */
-			.profile {
-				flex: 0 0 auto;
-				margin-right: 20px;
-			}
-
-			.profile img {
-				width: 150px;
-				height: 150px;
-				border-radius: 50%;
-				object-fit: cover;
-				border: 2px solid #1abc9c;
 			}
 
 			/* Content Styles */
@@ -72,45 +64,52 @@
 				margin-bottom: 10px;
 			}
 
+			.intro-text {
+				font-size: 1.3em;
+				font-weight: 700;
+				margin-bottom: 10px;
+				color: var(--accent);
+			}
+
 			.content h1 {
 				font-size: 1.6em;
 				margin-bottom: 5px;
-				color: #1abc9c;
+				color: var(--accent);
 			}
 
 			.subheader {
-				font-size: 0.75em;
+				font-size: 1em;
 				margin-bottom: 10px;
 				line-height: 1.4;
 			}
 
 			.subheader a.inline-link {
 				text-decoration: underline;
-				color: #1abc9c;
+				color: var(--accent);
 				transition: color 0.3s, transform 0.3s;
 			}
 
 			.subheader a.inline-link:hover,
 			.subheader a.inline-link:focus {
-				color: #16a085;
+				color: var(--accent-hover);
 				transform: translateY(-1px);
 			}
 
 			.content p {
-				font-size: 0.7em;
+				font-size: 1em;
 				margin-bottom: 10px;
-				line-height: 1.4;
+				line-height: 1.6;
 			}
 
 			.content a.inline-link {
 				text-decoration: underline;
-				color: #1abc9c;
+				color: var(--accent);
 				transition: color 0.3s, transform 0.3s;
 			}
 
 			.content a.inline-link:hover,
 			.content a.inline-link:focus {
-				color: #16a085;
+				color: var(--accent-hover);
 				transform: translateY(-1px);
 			}
 
@@ -128,35 +127,27 @@
 
 			.links a {
 				text-decoration: underline;
-				color: #1abc9c;
-				font-size: 0.7em;
+				color: var(--accent);
+				font-size: 1em;
 				transition: color 0.3s, transform 0.3s;
 			}
 
 			.links a:hover,
 			.links a:focus {
-				color: #16a085;
+				color: var(--accent-hover);
 				transform: translateY(-1px);
 			}
 
 			/* Responsive adjustments for mobile */
 			@media (max-width: 768px) {
 				.container {
-					flex-direction: column;
-					text-align: center;
-				}
-
-				.profile {
-					margin: 0 0 15px 0;
-				}
-
-				.profile img {
-					width: 120px;
-					height: 120px;
+					max-width: 100%;
+					width: 100%;
+					padding: 10px;
 				}
 
 				.content {
-					text-align: center;
+					text-align: left;
 				}
 
 				.content h1 {
@@ -166,7 +157,7 @@
 				.subheader,
 				.content p,
 				.links a {
-					font-size: 0.65em;
+					font-size: 0.9em;
 				}
 
 				.links li {
@@ -187,41 +178,44 @@
 				}
 			}
 
+			::selection {
+				background: #ffe0b2;
+				color: #000000;
+			}
+
 		</style>
 	</head>
 
 	<body>
 		<div class="container">
-			<!-- Local Profile Photo -->
-			<div class="profile">
-				<img src="avatar.png" alt="Ostap Blystsiv" />
-			</div>
 			<!-- Content Section -->
 			<div class="content">
 				<header>
-					<h1>Ostap Blystsiv 👋🏻</h1>
-					<div class="subheader">
-						Product Manager based in Lviv, Ukraine 🇺🇦
-					</div>
+					<p class="intro-text">
+						Hi, I'm Ostap — a code‑turned‑product manager from Lviv, Ukraine 🇺🇦
+					</p>
 				</header>
 				<p>
-					Developer which desided to become PM while studying Software Engineering at LNU.
+					I wrote my first line of JavaScript in high school and never looked back. Two years of front‑end work taught
+					me how things are built.
 				</p>
 				<p>
-					Gym enthusiast, football player and fan with a keen interest in entrepreneurship.
+					Today I’m a product manager, obsessed with the <em>why</em> behind the <em>how</em>. I turn data, user
+					stories, and a bit of gut feeling into features people actually use.
 				</p>
 				<p>
-					Connect with me on
+					Away from the laptop, you’ll catch me in the gym, kicking a football, or diving into a good book — always on
+					the hunt for the next big idea.
+				</p>
+				<p>
+					Let's connect! You can find me on
 					<a class="inline-link" href="https://www.linkedin.com/in/blystsiv" target="_blank"
 						rel="noopener noreferrer">LinkedIn</a>,
-					reach out on
+					or reach out via
 					<a class="inline-link" href="https://t.me/ostap_blystsiv" target="_blank"
-						rel="noopener noreferrer">Telegram</a>,
-					or review my
-					<a class="inline-link"
-						href="https://drive.google.com/file/d/1pfK4x-QAk7jWlZ4jINjbFXRA54iyn3H8/view?usp=sharing" target="_blank"
-						rel="noopener noreferrer">CV</a>
+						rel="noopener noreferrer">Telegram</a>.
 				</p>
+
 			</div>
 		</div>
 	</body>
